@@ -19,7 +19,7 @@ module A_high_after_2clk_B_high;
   
   property prop();
     @(posedge clk) disable iff(!rst)
-    A |-> B; 
+    A |=> B; 
   endproperty
   
   assert property(prop)
